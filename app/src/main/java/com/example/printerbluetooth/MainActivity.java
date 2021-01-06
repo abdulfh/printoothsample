@@ -88,27 +88,27 @@ public class MainActivity extends AppCompatActivity {
             printing.setPrintingCallback(new PrintingCallback() {
                 @Override
                 public void connectingWithPrinter() {
-                    Toast.makeText(MainActivity.this, "1 Connecting with printer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Connecting with printer", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void printingOrderSentSuccessfully() {
-                    Toast.makeText(MainActivity.this, "2Connecting with printer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Data Sent To printer", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void connectionFailed(String s) {
-                    Toast.makeText(MainActivity.this, "3Connecting with printer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Connection fail : " + s, Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onError(String s) {
-                    Toast.makeText(MainActivity.this, "4Connecting with printer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Error : " + s, Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onMessage(String s) {
-                    Toast.makeText(MainActivity.this, "5Connecting with printer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
                 }
             });
         }
